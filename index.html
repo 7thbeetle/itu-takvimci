@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İTÜ Takvimci</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>İTÜ Takvimci</h1>
+
+    <!-- Takvim Yönetimi -->
+    <div class="calendar-manager">
+      <label for="calendar-select">Takvimler</label>
+      <select id="calendar-select"></select>
+      <div class="calendar-actions">
+        <button id="calendar-add" class="calendar-action-btn" title="Yeni takvim ekle">+</button>
+        <button id="calendar-delete" class="calendar-action-btn" title="Mevcut takvimi sil">×</button>
+        <button id="calendar-copy" class="calendar-action-btn" title="Mevcut takvimi kopyala">C</button>
+        <button id="calendar-rename" class="calendar-action-btn" title="Mevcut takvimi yeniden adlandır">R</button>
+      </div>
+    </div>
+    
+    <!-- Bölüm Filtreleri -->
+    <div class="filters">
+      <div class="filter-group">
+        <label for="ana-dal">Ana Dal:</label>
+        <select id="ana-dal">
+          <option value="">Tümü</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="yan-dal">Yan Dal:</label>
+        <select id="yan-dal">
+          <option value="">Tümü</option>
+        </select>
+      </div>
+      <button id="filtrele-btn">Filtrele</button>
+    </div>
+
+    <!-- Ders Seçimi -->
+    <div class="course-selection-container">
+      <div class="course-selection-header">
+        <button id="yeni-ders-form-btn" class="yeni-ders-btn">+ Ders Ekle</button>
+        <button id="download-calendar-btn" class="download-btn">Takvimi İndir</button>
+        <div class="crn-fill-block">
+          <a id="crn-fill-btn" class="crn-fill-btn" href="#" role="button">CRN Doldur</a>
+        </div>
+      </div>
+      <div id="course-selection-forms"></div>
+    </div>
+
+    <!-- Alternatif CRN -->
+    <div class="alt-crn-container">
+      <button id="alt-crn-btn" class="alt-crn-btn">Alternatif CRN Hesapla</button>
+    </div>
+
+    <!-- Takvim -->
+    <div class="calendar-container">
+      <div class="alt-controls hidden" id="alt-controls">
+        <div class="alt-nav">
+          <button id="alt-prev" class="alt-nav-btn" aria-label="Önceki">‹</button>
+          <span id="alt-count">1/1</span>
+          <button id="alt-next" class="alt-nav-btn" aria-label="Sonraki">›</button>
+        </div>
+        <div class="alt-actions">
+          <button id="alt-copy" class="alt-action-btn">Takvime Kopyala</button>
+          <button id="alt-confirm" class="alt-action-btn primary">Onayla</button>
+        </div>
+      </div>
+      <div id="calendar"></div>
+    </div>
+
+    <!-- Nasıl Kullanılır ve Bilgilendirme -->
+    <div class="info-section">
+      <div class="info-box">
+        <h2>Nasıl Kullanılır?</h2>
+        <ul>
+          <li>Ana Dal ve Yan Dal seçeneklerinden bölüm filtrelemesi yapabilirsiniz.</li>
+          <li>"+ Ders Ekle" butonuna tıklayarak yeni ders ekleyebilirsiniz.</li>
+          <li>Ders Kodu, Ders ve CRN seçerek dersinizi takvime ekleyebilirsiniz.</li>
+          <li>Seçtiğiniz dersler otomatik olarak kaydedilir ve sayfa yenilendiğinde korunur.</li>
+          <li>Dersi silmek için sağdaki kırmızı X butonunu kullanabilirsiniz.</li>
+          <li>Seçtiğiniz derslerin alternatif CRN'lerini hesaplamak için "Alternatif CRN Hesapla" butonunu kullanabilirsiniz.</li>
+          <li>Takvimi indirmek için "Takvimi İndir" butonunu kullanabilirsiniz.</li>
+          <li>OBS'de CRN doldurmak için "CRN Doldur" butonunu tarayıcınızın yer işaretlerine sürükleyip bırakabilirsiniz.</li>
+        </ul>
+      </div>
+      
+      <div class="info-box">
+        <h2>Bilgilendirme</h2>
+        <ul>
+          <li>Bu takvim İTÜ OBS sisteminden alınan verilerle oluşturulmuştur. (Son arşiv: 14.01.2026)</li>
+          <li>Ders bilgilerini manuel ben güncelliyorum ama ben de kullanıyorum o yüzden muhtemelen güncel olur.</li>
+          <li>Seçtiğiniz dersler ve takvimlertarayıcınızda saklanır ve farklı cihazlarda görünmez.</li>
+          <li>Hiçbir hakkı saklı değil istediğin gibi kullan yardımcı olduysam ne mutlu.</li>
+          <li>Hangi ders hangi dönem açılıyor öğrenmek için <a href="https://7thbeetle.github.io/itu-ders-arsivi/" target="_blank" rel="noopener noreferrer">itü ders arşivi</a> sitemi de ziyaret edebilirsiniz.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
