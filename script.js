@@ -306,6 +306,7 @@ function applyAlternativeProgram() {
     Kod: c.Kod,
     Ders: c.Ders,
     CRN: c.CRN,
+    'Öğretim Yöntemi': c['Öğretim Yöntemi'],
     Eğitmen: c.Eğitmen,
     Gün: c.Gün,
     Saat: c.Saat,
@@ -367,6 +368,7 @@ function copyAlternativeToNewCalendar() {
       Kod: c.Kod,
       Ders: c.Ders,
       CRN: c.CRN,
+      'Öğretim Yöntemi': c['Öğretim Yöntemi'],
       Eğitmen: c.Eğitmen,
       Gün: c.Gün,
       Saat: c.Saat,
@@ -1245,6 +1247,7 @@ function addCourse() {
     Kod: course.Kod,
     Ders: course.Ders,
     CRN: course.CRN,
+    'Öğretim Yöntemi': course['Öğretim Yöntemi'],
     Eğitmen: course.Eğitmen,
     Gün: course.Gün,
     Saat: course.Saat,
@@ -1309,6 +1312,7 @@ function addCourseFromForm(formId) {
     Kod: course.Kod,
     Ders: course.Ders,
     CRN: course.CRN,
+    'Öğretim Yöntemi': course['Öğretim Yöntemi'],
     Eğitmen: course.Eğitmen,
     Gün: course.Gün,
     Saat: course.Saat,
@@ -1596,6 +1600,14 @@ function renderCalendar() {
           className: 'course-block-name', 
           textContent: block.course.Ders 
         }));
+
+        // Öğretim yöntemi
+        if (block.course['Öğretim Yöntemi']) {
+          blockEl.appendChild(el('div', {
+            className: 'course-block-method',
+            textContent: block.course['Öğretim Yöntemi']
+          }));
+        }
         
         // Hoca adı
         if (block.course.Eğitmen && block.course.Eğitmen !== '-') {

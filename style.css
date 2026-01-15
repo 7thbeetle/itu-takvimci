@@ -198,12 +198,15 @@ h1 {
   height: 34px;
   border-radius: 8px;
   border: 2px solid #e0e0e0;
-  background: white;
+  background: #d9d9d9 !important; /* Açık, soluk gri */
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
+  color: #4a4a4a;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .pin-toggle.hidden {
@@ -211,8 +214,9 @@ h1 {
 }
 
 .pin-toggle.active {
-  border-color: #9B5A6C;
-  background: #f7eef1;
+  border-color: #5A7D5A;
+  background: #5A7D5A !important; /* Mat yeşil */
+  color: white;
 }
 
 h2 {
@@ -710,6 +714,15 @@ h2 {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   max-height: 2.4em;
+}
+
+.course-block-method {
+  font-size: 9px;
+  font-weight: 600;
+  opacity: 0.95;
+  line-height: 1.2;
+  margin-bottom: 2px;
+  text-align: left;
 }
 
 .course-block-instructor {
