@@ -23,7 +23,7 @@ const CALENDARS_STORAGE_KEY = 'itu_takvimci_calendars_v2';
 const STORAGE_KEY = 'itu_takvimci_program'; // legacy
 const FILTER_STORAGE_KEY = 'itu_takvimci_filters'; // legacy
 
-// Renk paleti (belirgin ve mat tonlar - fotoğraftaki gibi)
+// Renk paleti
 const colorPalette = [
   '#6B8FA3', '#8B4A5C', '#D4A574', '#5A7D5A', '#7A7A7A',
   '#7B9CB5', '#9B5A6C', '#E4B584', '#6A8D6A', '#8A8A8A',
@@ -854,7 +854,7 @@ function applyFilters(options = {}) {
     
     if (!kodSelect || !dersSelect || !crnSelect) return;
     
-    // Formun CRN'ini kontrol et (formToCRN'den) - bu en güvenilir kaynak
+    // Formun CRN'ini kontrol et (formToCRN'den)
     const formCRN = formToCRN.get(formId);
     if (formCRN) {
       // formToCRN'de CRN varsa, ders bilgisini bul ve dropdown'ları güncelle
@@ -902,7 +902,7 @@ function applyFilters(options = {}) {
             crnSelect.value = '';
           }
         });
-        return; // Bu form için işlem tamamlandı
+        return;
       }
     }
     
@@ -1272,7 +1272,7 @@ function addCourseFromForm(formId) {
   const crn = crnSelect.value;
   
   if (!kod || !crn) {
-    return; // Sessizce atla, alert gösterme
+    return; // Sessizce atla
   }
   
   // Aynı formdan daha önce eklenen dersi kaldır (eğer varsa)
@@ -1325,7 +1325,7 @@ function addCourseFromForm(formId) {
   saveNow();
   renderCalendar();
   
-  // Formu sıfırlama - hiçbir şey sıfırlanmasın, seçimler olduğu gibi kalsın
+  // Formu sıfırlama
 }
 
 
@@ -1387,8 +1387,6 @@ document.addEventListener('DOMContentLoaded', () => {
     downloadBtn.addEventListener('click', downloadCalendarAsImage);
   }
 });
-
-// Ders kaldır (artık kullanılmıyor, form silme butonu kullanılıyor)
 
 // Takvim çiz
 function renderCalendar() {
