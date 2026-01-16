@@ -1,190 +1,593 @@
 [
-    {
-      "faculty": "Bilgisayar ve Bilişim Fakültesi",
-      "programs": [
-        { "code": "BLG_LS", "name": "Bilgisayar Mühendisliği Lisans" },
-        { "code": "BLGE_LS", "name": "Bilgisayar Mühendisliği (İngilizce) Lisans" },
-        { "code": "CES_LS", "name": "Bilgisayar Mühendisliği (İngilizce) UOLP (Saraybosna-IUS)" },
-        { "code": "SBL_LS", "name": "Bilişim Sistemleri Mühendisliği (İngilizce) UOLP (SUNY-Binghamton University)" },
-        { "code": "SECE_LS", "name": "Siber Güvenlik Mühendisliği (İngilizce) Lisans" },
-        { "code": "YZVE_LS", "name": "Yapay Zeka ve Veri Mühendisliği (İngilizce) Lisans" }
-      ]
-    },
-    {
-      "faculty": "Denizcilik Fakültesi",
-      "programs": [
-        { "code": "DUI_LS", "name": "Deniz Ulaştırma İşletme Mühendisliği Lisans" },
-        { "code": "DUIE_LS", "name": "Deniz Ulaştırma İşletme Mühendisliği (İngilizce) Lisans" },
-        { "code": "GMI_LS", "name": "Gemi Makinaları İşletme Mühendisliği Lisans" },
-        { "code": "GMIE_LS", "name": "Gemi Makinaları İşletme Mühendisliği (İngilizce) Lisans" },
-        { "code": "SDU_LS", "name": "Deniz Ulaştırma İşletme Mühendisliği (İngilizce) UOLP (SUNY-Maritime College)" },
-        { "code": "SGM_LS", "name": "Gemi Makinaları İşletme Mühendisliği (İngilizce) UOLP (SUNY-Maritime College)" }
-      ]
-    },
-    {
-      "faculty": "Elektrik - Elektronik Fakültesi",
-      "programs": [
-        { "code": "EHB_LS", "name": "Elektronik ve Haberleşme Mühendisliği Lisans" },
-        { "code": "EHBE_LS", "name": "Elektronik ve Haberleşme Mühendisliği (İngilizce) Lisans" },
-        { "code": "EHN_LS", "name": "Elektronik ve Haberleşme Mühendisliği (İngilizce) UOLP (ABD-NJIT)" },
-        { "code": "EHS_LS", "name": "Elektronik ve Haberleşme Mühendisliği (İngilizce) UOLP (Saraybosna-IUS)" },
-        { "code": "ELE_LS", "name": "Elektronik Mühendisliği Lisans" },
-        { "code": "ELH_LS", "name": "Elektronik ve Haberleşme Mühendisliği (ELH) Lisans" },
-        { "code": "ELK_LS", "name": "Elektrik Mühendisliği Lisans" },
-        { "code": "ELKE_LS", "name": "Elektrik Mühendisliği (İngilizce) Lisans" },
-        { "code": "KOM_LS", "name": "Kontrol ve Otomasyon Mühendisliği Lisans" },
-        { "code": "KOME_LS", "name": "Kontrol ve Otomasyon Mühendisliği (İngilizce) Lisans" },
-        { "code": "KON_LS", "name": "Kontrol Mühendisliği Lisans" },
-        { "code": "ROS_LS", "name": "Robotik ve Otonom Sistemleri Mühendisliği Lisans" },
-        { "code": "ROSE_LS", "name": "Robotik ve Otonom Sistemleri Mühendisliği (İngilizce) Lisans" },
-        { "code": "TEL_LS", "name": "Telekomünikasyon Mühendisliği Lisans" }
-      ]
-    },
-    {
-      "faculty": "Fen - Edebiyat Fakültesi",
-      "programs": [
-        { "code": "BIO_LS", "name": "Moleküler Biyoloji ve Genetik Lisans" },
-        { "code": "BIOE_LS", "name": "Moleküler Biyoloji ve Genetik (İngilizce) Lisans" },
-        { "code": "FIZ_LS", "name": "Fizik Mühendisliği Lisans" },
-        { "code": "FIZE_LS", "name": "Fizik Mühendisliği (İngilizce) Lisans" },
-        { "code": "KIM_LS", "name": "Kimya Lisans" },
-        { "code": "KIME_LS", "name": "Kimya (İngilizce) Lisans" },
-        { "code": "MAT_LS", "name": "Matematik Mühendisliği Lisans" },
-        { "code": "MATE_LS", "name": "Matematik Mühendisliği (İngilizce) Lisans" }
-      ]
-    },
-    {
-      "faculty": "Gemi İnşaatı ve Deniz Bilimleri Fakültesi",
-      "programs": [
-        { "code": "DEN_LS", "name": "Gemi ve Deniz Teknolojisi Mühendisliği Lisans" },
-        { "code": "DENE_LS", "name": "Gemi ve Deniz Teknolojisi Mühendisliği (İngilizce) Lisans" },
-        { "code": "GEM_LS", "name": "Gemi İnşaatı ve Gemi Makinaları Mühendisliği Lisans" },
-        { "code": "GEME_LS", "name": "Gemi İnşaatı ve Gemi Makinaları Mühendisliği (İngilizce) Lisans" },
-        { "code": "SGI_LS", "name": "Gemi İnşaatı ve Gemi Makinaları Mühendisliği (İngilizce) UOLP (UK-Strathclyde)" }
-      ]
-    },
-    {
-      "faculty": "İnşaat Fakültesi",
-      "programs": [
-        { "code": "AIN_LS", "name": "İnşaat Mühendisliği (İngilizce) UOLP (Azerbaycan-AZMIU)" },
-        { "code": "CEV_LS", "name": "Çevre Mühendisliği Lisans" },
-        { "code": "CEVE_LS", "name": "Çevre Mühendisliği (İngilizce) Lisans" },
-        { "code": "GEO_LS", "name": "Geomatik Mühendisliği Lisans" },
-        { "code": "GEOE_LS", "name": "Geomatik Mühendisliği (İngilizce) Lisans" },
-        { "code": "HTA_LS", "name": "Harita Mühendisliği Lisans" },
-        { "code": "HTAE_LS", "name": "Harita Mühendisliği (İngilizce) Lisans" },
-        { "code": "INS_LS", "name": "İnşaat Mühendisliği Lisans" },
-        { "code": "INSE_LS", "name": "İnşaat Mühendisliği (İngilizce) Lisans" },
-        { "code": "SCE_LS", "name": "Çevre Mühendisliği (İngilizce) UOLP (SUNY-University at Buffalo)" },
-        { "code": "SIN_LS", "name": "İnşaat Mühendisliği (İngilizce) UOLP (SUNY-University at Buffalo)" }
-      ]
-    },
-    {
-      "faculty": "İstanbul Türk Musikisi Devlet Konservatuvarı",
-      "programs": [
-        { "code": "BST_LS", "name": "Bestecilik Lisans" },
-        { "code": "CAB_3T_LS", "name": "Çalgı (Üç Telli Kemençe) Lisans Programı" },
-        { "code": "CAB_4T_LS", "name": "Çalgı (4 Telli Kemençe) Lisans Programı" },
-        { "code": "CAB_BG_LS", "name": "Çalgı (Bağlama) Lisans Programı" },
-        { "code": "CAB_DL_LS", "name": "Çalgı (Dilli Kaval) Lisans Programı" },
-        { "code": "CAB_DS_LS", "name": "Çalgı (Dilsiz Kaval) Lisans Programı" },
-        { "code": "CAB_KA_LS", "name": "Çalgı (Kanun) Lisans Programı" },
-        { "code": "CAB_KE_LS", "name": "Çalgı (Kemane) Lisans Programı" },
-        { "code": "CAB_KL_LS", "name": "Çalgı (Klarnet) Lisans Programı" },
-        { "code": "CAB_KM_LS", "name": "Çalgı (Keman) Lisans Programı" },
-        { "code": "CAB_KO_LS", "name": "Çalgı (Kontrbas) Lisans Programı" },
-        { "code": "CAB_LS", "name": "Çalgı Lisans" },
-        { "code": "CAB_ME_LS", "name": "Çalgı (Mey) Lisans Programı" },
-        { "code": "CAB_NE_LS", "name": "Çalgı (Ney) Lisans Programı" },
-        { "code": "CAB_TA_LS", "name": "Çalgı (Tar) Lisans Programı" },
-        { "code": "CAB_TN_LS", "name": "Çalgı (Tanbur) Lisans Programı" },
-        { "code": "CAB_UD_LS", "name": "Çalgı (Ud) Lisans Programı" },
-        { "code": "CAB_VC_LS", "name": "Çalgı (Vurmalı Çalgılar) Lisans Programı" },
-        { "code": "CAB_VI_LS", "name": "Çalgı (Viyola) Lisans Programı" },
-        { "code": "CAB_VS_LS", "name": "Çalgı (Viyolonsel) Lisans Programı" },
-        { "code": "CEB_LS", "name": "Çalgı Eğitimi Lisans" },
-        { "code": "KMP_LS", "name": "Kompozisyon Lisans" },
-        { "code": "MTR_LS", "name": "Müzik Teorisi Lisans" },
-        { "code": "MUT_LS", "name": "Müzik Teknolojileri Lisans" },
-        { "code": "MUZ_LS", "name": "Müzikoloji Lisans" },
-        { "code": "MUZE_LS", "name": "Müzikoloji (İngilizce) Lisans" },
-        { "code": "MZT_LS", "name": "Müzik Teknolojisi Lisans" },
-        { "code": "SES_LS", "name": "Ses Eğitimi Lisans" },
-        { "code": "SES_TH_LS", "name": "Ses Eğitimi (THM) Lisans" },
-        { "code": "SES_TS_LS", "name": "Ses Eğitimi (TSM) Lisans" },
-        { "code": "TEB_LS", "name": "Temel Bilimler (Konservatuvan) Lisans" },
-        { "code": "THO_LS", "name": "Türk Halk Oyunları Lisans" }
-      ]
-    },
-    {
-      "faculty": "İşletme Fakültesi",
-      "programs": [
-        { "code": "ECNE_LS", "name": "Ekonomi (İngilizce) Lisans" },
-        { "code": "END_LS", "name": "Endüstri Mühendisliği Lisans" },
-        { "code": "ENDE_LS", "name": "Endüstri Mühendisliği (İngilizce) Lisans" },
-        { "code": "ESS_LS", "name": "Ekonomi (İngilizce) UOLP (Saraybosna-IUS)" },
-        { "code": "IEBE_LS", "name": "Endüstri Mühendisliği (İngilizce) (TAU)" },
-        { "code": "ISL_LS", "name": "İşletme Mühendisliği Lisans" },
-        { "code": "ISLE_LS", "name": "İşletme Mühendisliği (İngilizce) Lisans" },
-        { "code": "SED_LS", "name": "Endüstri Mühendisliği (İngilizce) UOLP (SUNY-Binghamtom)" },
-        { "code": "SEK_LS", "name": "Ekonomi (İngilizce) UOLP (SUNY-New Paltz)" },
-        { "code": "SEN_LS", "name": "Endüstri Mühendisliği (İngilizce) UOLP (ABD-SIUE)" },
-        { "code": "SIS_LS", "name": "İşletme (İngilizce) UOLP (SUNY-New Paltz)" },
-        { "code": "VBAE_LS", "name": "Veri Bilimi ve Analitiği (İngilizce) Lisans" }
-      ]
-    },
-    {
-      "faculty": "İTÜ-KKTC Eğitim Araştırma Yerleşkesi",
-      "programs": [
-        { "code": "ARC_LS", "name": "Mimarlık (İngilizce) (KKTC) Lisans" },
-        { "code": "CEN_LS", "name": "Bilgisayar Mühendisliği (İngilizce) (KKTC) Lisans" },
-        { "code": "EEE_LS", "name": "Elektrik - Elektronik Mühendisliği (İngilizce) (KKTC) Lisans" },
-        { "code": "EFN_LS", "name": "Ekonomi ve Finans (İngilizce) (KKTC) Lisans" },
-        { "code": "GEMK_LS", "name": "Gemi İnşaatı ve Gemi Makinaları Mühendisliği (İngilizce) (KKTC) Lisans" },
-        { "code": "IAD_LS", "name": "İç Mimarlık (İngilizce) (KKTC) Lisans" },
-        { "code": "IND_LS", "name": "Endüstri Mühendisliği (İngilizce) (KKTC) Lisans" },
-        { "code": "MEN_LS", "name": "Gemi Makinaları İşletme Mühendisliği (İngilizce) (KKTC) Lisans" },
-        { "code": "MMD_LS", "name": "Denizcilik İşletmeleri Yönetimi (İngilizce) (KKTC) Lisans" },
-        { "code": "MTM_LS", "name": "Deniz Ulaştırma İşletme Mühendisliği (İngilizce) (KKTC) Lisans" },
-        { "code": "NAE_LS", "name": "Gemi İnşaatı ve Gemi Makinaları Mühendisliği (İngilizce) (KKTC) Lisans" }
-      ]
-    },
-    {
-      "faculty": "Kimya - Metalurji Fakültesi",
-      "programs": [
-        { "code": "BES_LS", "name": "Biyomühendislik (İngilizce) UOLP (Saraybosna-IUS)" },
-        { "code": "GID_LS", "name": "Gıda Mühendisliği Lisans" },
-        { "code": "GIDE_LS", "name": "Gıda Mühendisliği (İngilizce) Lisans" },
-        { "code": "KMM_LS", "name": "Kimya Mühendisliği Lisans" },
-        { "code": "KMME_LS", "name": "Kimya Mühendisliği (İngilizce) Lisans" },
-        { "code": "MBI_LS", "name": "Biyomühendislik (İngilizce) UOLP (ABD-Montana State University)" },
-        { "code": "MET_LS", "name": "Metalurji ve Malzeme Mühendisliği Lisans" },
-        { "code": "METE_LS", "name": "Metalurji ve Malzeme Mühendisliği (İngilizce) Lisans" }
-      ]
-    },
-    {
-      "faculty": "Maden Fakültesi",
-      "programs": [
-        { "code": "CHZ_LS", "name": "Cevher Hazırlama Mühendisliği Lisans" },
-        { "code": "CHZE_LS", "name": "Cevher Hazırlama Mühendisliği (İngilizce) Lisans" },
-        { "code": "JEF_LS", "name": "Jeofizik Mühendisliği Lisans" },
-        { "code": "JEFE_LS", "name": "Jeofizik Mühendisliği (İngilizce) Lisans" },
-        { "code": "JEO_LS", "name": "Jeoloji Mühendisliği Lisans" },
-        { "code": "JEOE_LS", "name": "Jeoloji Mühendisliği (İngilizce) Lisans" },
-        { "code": "MAD_LS", "name": "Maden Mühendisliği Lisans" },
-        { "code": "MADE_LS", "name": "Maden Mühendisliği (İngilizce) Lisans" },
-        { "code": "PET_LS", "name": "Petrol ve Doğal Gaz Mühendisliği Lisans" },
-        { "code": "PETE_LS", "name": "Petrol ve Doğal Gaz Mühendisliği (İngilizce) Lisans" }
-      ]
-    },
-    {
-      "faculty": "Makina Fakültesi",
-      "programs": [
-        { "code": "IML_LS", "name": "İmalat Mühendisliği Lisans" },
-        { "code": "IMLE_LS", "name": "İmalat Mühendisliği (İngilizce) Lisans" },
-        { "code": "MAK_LS", "name": "Makina Mühendisliği Lisans" },
-        { "code": "MAKE_LS", "name": "Makina Mühendisliği (İngilizce) Lisans" },
-        { "code": "MSS_LS", "name": "Makina Mühendisliği (İngilizce)" }
-      ]
-    }
+  {
+    "faculty": "Bilgisayar ve Bilişim Fakültesi",
+    "programs": [
+      {
+        "code": "BLG_LS",
+        "name": "Bilgisayar Mühendisliği Lisans"
+      },
+      {
+        "code": "BLGE_LS",
+        "name": "Bilgisayar Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "SECE_LS",
+        "name": "Siber Güvenlik Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "YZVE_LS",
+        "name": "Yapay Zeka ve Veri Mühendisliği (İngilizce) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "Denizcilik Fakültesi",
+    "programs": [
+      {
+        "code": "DUI_LS",
+        "name": "Deniz Ulaştırma İşletme Mühendisliği Lisans"
+      },
+      {
+        "code": "DUIE_LS",
+        "name": "Deniz Ulaştırma İşletme Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "GMI_LS",
+        "name": "Gemi Makinaları İşletme Mühendisliği Lisans"
+      },
+      {
+        "code": "GMIE_LS",
+        "name": "Gemi Makinaları İşletme Mühendisliği (İngilizce) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "Elektrik - Elektronik Fakültesi",
+    "programs": [
+      {
+        "code": "EHB_LS",
+        "name": "Elektronik ve Haberleşme Mühendisliği Lisans"
+      },
+      {
+        "code": "EHBE_LS",
+        "name": "Elektronik ve Haberleşme Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "ELE_LS",
+        "name": "Elektronik Mühendisliği Lisans"
+      },
+      {
+        "code": "ELH_LS",
+        "name": "Elektronik ve Haberleşme Mühendisliği (ELH) Lisans"
+      },
+      {
+        "code": "ELK_LS",
+        "name": "Elektrik Mühendisliği Lisans"
+      },
+      {
+        "code": "ELKE_LS",
+        "name": "Elektrik Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "KOM_LS",
+        "name": "Kontrol ve Otomasyon Mühendisliği Lisans"
+      },
+      {
+        "code": "KOME_LS",
+        "name": "Kontrol ve Otomasyon Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "KON_LS",
+        "name": "Kontrol Mühendisliği Lisans"
+      },
+      {
+        "code": "ROS_LS",
+        "name": "Robotik ve Otonom Sistemleri Mühendisliği Lisans"
+      },
+      {
+        "code": "ROSE_LS",
+        "name": "Robotik ve Otonom Sistemleri Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "TEL_LS",
+        "name": "Telekomünikasyon Mühendisliği Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "Fen - Edebiyat Fakültesi",
+    "programs": [
+      {
+        "code": "BIO_LS",
+        "name": "Moleküler Biyoloji ve Genetik Lisans"
+      },
+      {
+        "code": "BIOE_LS",
+        "name": "Moleküler Biyoloji ve Genetik (İngilizce) Lisans"
+      },
+      {
+        "code": "FIZ_LS",
+        "name": "Fizik Mühendisliği Lisans"
+      },
+      {
+        "code": "FIZE_LS",
+        "name": "Fizik Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "KIM_LS",
+        "name": "Kimya Lisans"
+      },
+      {
+        "code": "KIME_LS",
+        "name": "Kimya (İngilizce) Lisans"
+      },
+      {
+        "code": "MAT_LS",
+        "name": "Matematik Mühendisliği Lisans"
+      },
+      {
+        "code": "MATE_LS",
+        "name": "Matematik Mühendisliği (İngilizce) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "Gemi İnşaatı ve Deniz Bilimleri Fakültesi",
+    "programs": [
+      {
+        "code": "DEN_LS",
+        "name": "Gemi ve Deniz Teknolojisi Mühendisliği Lisans"
+      },
+      {
+        "code": "DENE_LS",
+        "name": "Gemi ve Deniz Teknolojisi Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "GEM_LS",
+        "name": "Gemi İnşaatı ve Gemi Makinaları Mühendisliği Lisans"
+      },
+      {
+        "code": "GEME_LS",
+        "name": "Gemi İnşaatı ve Gemi Makinaları Mühendisliği (İngilizce) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "İnşaat Fakültesi",
+    "programs": [
+      {
+        "code": "CEV_LS",
+        "name": "Çevre Mühendisliği Lisans"
+      },
+      {
+        "code": "CEVE_LS",
+        "name": "Çevre Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "GEO_LS",
+        "name": "Geomatik Mühendisliği Lisans"
+      },
+      {
+        "code": "GEOE_LS",
+        "name": "Geomatik Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "HTA_LS",
+        "name": "Harita Mühendisliği Lisans"
+      },
+      {
+        "code": "HTAE_LS",
+        "name": "Harita Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "INS_LS",
+        "name": "İnşaat Mühendisliği Lisans"
+      },
+      {
+        "code": "INSE_LS",
+        "name": "İnşaat Mühendisliği (İngilizce) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "İşletme Fakültesi",
+    "programs": [
+      {
+        "code": "ECNE_LS",
+        "name": "Ekonomi (İngilizce) Lisans"
+      },
+      {
+        "code": "END_LS",
+        "name": "Endüstri Mühendisliği Lisans"
+      },
+      {
+        "code": "ENDE_LS",
+        "name": "Endüstri Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "IEBE_LS",
+        "name": "Endüstri Mühendisliği (İngilizce) (TAU)"
+      },
+      {
+        "code": "ISL_LS",
+        "name": "İşletme Mühendisliği Lisans"
+      },
+      {
+        "code": "ISLE_LS",
+        "name": "İşletme Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "VBAE_LS",
+        "name": "Veri Bilimi ve Analitiği (İngilizce) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "İTÜ-KKTC Eğitim-Araştırma Yerleşkeleri",
+    "programs": [
+      {
+        "code": "ARC_LS",
+        "name": "Mimarlık (İngilizce) (KKTC) Lisans"
+      },
+      {
+        "code": "CEN_LS",
+        "name": "Bilgisayar Mühendisliği (İngilizce) (KKTC) Lisans"
+      },
+      {
+        "code": "EEE_LS",
+        "name": "Elektrik - Elektronik Mühendisliği (İngilizce) (KKTC) Lisans"
+      },
+      {
+        "code": "EFN_LS",
+        "name": "Ekonomi ve Finans (İngilizce) (KKTC) Lisans"
+      },
+      {
+        "code": "GEMK_LS",
+        "name": "Gemi İnşaatı ve Gemi Makinaları Mühendisliği (İngilizce) (KKTC) Lisans"
+      },
+      {
+        "code": "IAD_LS",
+        "name": "İç Mimarlık (İngilizce) (KKTC) Lisans"
+      },
+      {
+        "code": "IND_LS",
+        "name": "Endüstri Mühendisliği (İngilizce) (KKTC) Lisans"
+      },
+      {
+        "code": "MEN_LS",
+        "name": "Gemi Makinaları İşletme Mühendisliği (İngilizce) (KKTC) Lisans"
+      },
+      {
+        "code": "MMD_LS",
+        "name": "Denizcilik İşletmeleri Yönetimi (İngilizce) (KKTC) Lisans"
+      },
+      {
+        "code": "MTM_LS",
+        "name": "Deniz Ulaştırma İşletme Mühendisliği (İngilizce) (KKTC) Lisans"
+      },
+      {
+        "code": "NAE_LS",
+        "name": "Gemi İnşaatı ve Gemi Makinaları Mühendisliği (İngilizce) (KKTC) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "Kimya - Metalurji Fakültesi",
+    "programs": [
+      {
+        "code": "GID_LS",
+        "name": "Gıda Mühendisliği Lisans"
+      },
+      {
+        "code": "GIDE_LS",
+        "name": "Gıda Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "KMM_LS",
+        "name": "Kimya Mühendisliği Lisans"
+      },
+      {
+        "code": "KMME_LS",
+        "name": "Kimya Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "MET_LS",
+        "name": "Metalurji ve Malzeme Mühendisliği Lisans"
+      },
+      {
+        "code": "METE_LS",
+        "name": "Metalurji ve Malzeme Mühendisliği (İngilizce) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "Maden Fakültesi",
+    "programs": [
+      {
+        "code": "CHZ_LS",
+        "name": "Cevher Hazırlama Mühendisliği Lisans"
+      },
+      {
+        "code": "CHZE_LS",
+        "name": "Cevher Hazırlama Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "JEF_LS",
+        "name": "Jeofizik Mühendisliği Lisans"
+      },
+      {
+        "code": "JEFE_LS",
+        "name": "Jeofizik Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "JEO_LS",
+        "name": "Jeoloji Mühendisliği Lisans"
+      },
+      {
+        "code": "JEOE_LS",
+        "name": "Jeoloji Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "MAD_LS",
+        "name": "Maden Mühendisliği Lisans"
+      },
+      {
+        "code": "MADE_LS",
+        "name": "Maden Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "PET_LS",
+        "name": "Petrol ve Doğal Gaz Mühendisliği Lisans"
+      },
+      {
+        "code": "PETE_LS",
+        "name": "Petrol ve Doğal Gaz Mühendisliği (İngilizce) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "Makina Fakültesi",
+    "programs": [
+      {
+        "code": "IML_LS",
+        "name": "İmalat Mühendisliği Lisans"
+      },
+      {
+        "code": "IMLE_LS",
+        "name": "İmalat Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "MAK_LS",
+        "name": "Makina Mühendisliği Lisans"
+      },
+      {
+        "code": "MAKE_LS",
+        "name": "Makina Mühendisliği (İngilizce) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "Mimarlık Fakültesi",
+    "programs": [
+      {
+        "code": "ENT_LS",
+        "name": "Endüstriyel Tasarım Lisans"
+      },
+      {
+        "code": "ENTE_LS",
+        "name": "Endüstriyel Tasarım (İngilizce) Lisans"
+      },
+      {
+        "code": "EUT_LS",
+        "name": "Endüstri Ürünleri Tasarımı Lisans"
+      },
+      {
+        "code": "EUTE_LS",
+        "name": "Endüstri Ürünleri Tasarımı (İngilizce) Lisans"
+      },
+      {
+        "code": "ICM_LS",
+        "name": "İç Mimarlık Lisans"
+      },
+      {
+        "code": "MIM_LS",
+        "name": "Mimarlık Lisans"
+      },
+      {
+        "code": "MIME_LS",
+        "name": "Mimarlık (İngilizce) Lisans"
+      },
+      {
+        "code": "PEM_LS",
+        "name": "Peyzaj Mimarlığı Lisans"
+      },
+      {
+        "code": "PEME_LS",
+        "name": "Peyzaj Mimarlığı (İngilizce) Lisans"
+      },
+      {
+        "code": "SBP_LS",
+        "name": "Şehir ve Bölge Planlama Lisans"
+      },
+      {
+        "code": "SBPE_LS",
+        "name": "Şehir ve Bölge Planlama (İngilizce) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "Tekstil Teknolojileri ve Tasarımı Fakültesi",
+    "programs": [
+      {
+        "code": "TEK_LS",
+        "name": "Tekstil Mühendisliği Lisans"
+      },
+      {
+        "code": "TEKE_LS",
+        "name": "Tekstil Mühendisliği (İngilizce) Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "Türk Musikisi Devlet Konservatuvarı",
+    "programs": [
+      {
+        "code": "BST_LS",
+        "name": "Bestecilik Lisans"
+      },
+      {
+        "code": "CAB_3T_LS",
+        "name": "Çalgı (Üç Telli Kemençe) Lisans Programı"
+      },
+      {
+        "code": "CAB_4T_LS",
+        "name": "Çalgı (4 Telli Kemençe) Lisans Programı"
+      },
+      {
+        "code": "CAB_BG_LS",
+        "name": "Çalgı (Bağlama) Lisans Programı"
+      },
+      {
+        "code": "CAB_DL_LS",
+        "name": "Çalgı (Dilli Kaval) Lisans Programı"
+      },
+      {
+        "code": "CAB_DS_LS",
+        "name": "Çalgı (Dilsiz Kaval) Lisans Programı"
+      },
+      {
+        "code": "CAB_KA_LS",
+        "name": "Çalgı (Kanun) Lisans Programı"
+      },
+      {
+        "code": "CAB_KE_LS",
+        "name": "Çalgı (Kemane) Lisans Programı"
+      },
+      {
+        "code": "CAB_KL_LS",
+        "name": "Çalgı (Klarnet) Lisans Programı"
+      },
+      {
+        "code": "CAB_KM_LS",
+        "name": "Çalgı (Keman) Lisans Programı"
+      },
+      {
+        "code": "CAB_KO_LS",
+        "name": "Çalgı (Kontrbas) Lisans Programı"
+      },
+      {
+        "code": "CAB_LS",
+        "name": "Çalgı Lisans"
+      },
+      {
+        "code": "CAB_ME_LS",
+        "name": "Çalgı (Mey) Lisans Programı"
+      },
+      {
+        "code": "CAB_NE_LS",
+        "name": "Çalgı (Ney) Lisans Programı"
+      },
+      {
+        "code": "CAB_TA_LS",
+        "name": "Çalgı (Tar) Lisans Programı"
+      },
+      {
+        "code": "CAB_TN_LS",
+        "name": "Çalgı (Tanbur) Lisans Programı"
+      },
+      {
+        "code": "CAB_UD_LS",
+        "name": "Çalgı (Ud) Lisans Programı"
+      },
+      {
+        "code": "CAB_VC_LS",
+        "name": "Çalgı (Vurmalı Çalgılar) Lisans Programı"
+      },
+      {
+        "code": "CAB_VI_LS",
+        "name": "Çalgı (Viyola) Lisans Programı"
+      },
+      {
+        "code": "CAB_VS_LS",
+        "name": "Çalgı (Viyolonsel) Lisans Programı"
+      },
+      {
+        "code": "CEB_LS",
+        "name": "Çalgı Eğitimi Lisans"
+      },
+      {
+        "code": "KMP_LS",
+        "name": "Kompozisyon Lisans"
+      },
+      {
+        "code": "MTR_LS",
+        "name": "Müzik Teorisi Lisans"
+      },
+      {
+        "code": "MUT_LS",
+        "name": "Müzik Teknolojileri Lisans"
+      },
+      {
+        "code": "MUZ_LS",
+        "name": "Müzikoloji Lisans"
+      },
+      {
+        "code": "MUZE_LS",
+        "name": "Müzikoloji (İngilizce) Lisans"
+      },
+      {
+        "code": "MZT_LS",
+        "name": "Müzik Teknolojisi Lisans"
+      },
+      {
+        "code": "SES_LS",
+        "name": "Ses Eğitimi Lisans"
+      },
+      {
+        "code": "SES_TH_LS",
+        "name": "Ses Eğitimi (THM) Lisans"
+      },
+      {
+        "code": "SES_TS_LS",
+        "name": "Ses Eğitimi (TSM) Lisans"
+      },
+      {
+        "code": "TEB_LS",
+        "name": "Temel Bilimler (Konservatuvar) Lisans"
+      },
+      {
+        "code": "THO_LS",
+        "name": "Türk Halk Oyunları Lisans"
+      }
+    ]
+  },
+  {
+    "faculty": "Uçak ve Uzay Bilimleri Fakültesi",
+    "programs": [
+      {
+        "code": "IBM_LS",
+        "name": "İklim Bilimi ve Meteoroloji Mühendisliği Lisans"
+      },
+      {
+        "code": "MTO_LS",
+        "name": "Meteoroloji Mühendisliği Lisans"
+      },
+      {
+        "code": "MTOE_LS",
+        "name": "Meteoroloji Mühendisliği (İngilizce) Lisans"
+      },
+      {
+        "code": "UCK_LS",
+        "name": "Uçak Mühendisliği Lisans"
+      },
+      {
+        "code": "UZB_LS",
+        "name": "Uzay Mühendisliği Lisans"
+      },
+      {
+        "code": "UZBE_LS",
+        "name": "Uzay Mühendisliği (İngilizce) Lisans"
+      }
+    ]
+  }
 ]

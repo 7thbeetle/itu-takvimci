@@ -416,6 +416,21 @@ h2 {
     gap: 8px;
 }
 
+.credit-display {
+  min-width: 110px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  white-space: nowrap;
+}
+
+.credit-display.empty {
+  opacity: 0.7;
+}
+
 .selection-group label {
   font-size: 13px;
   color: #555;
@@ -546,9 +561,8 @@ h2 {
 /* CRN Doldur */
 .crn-fill-block {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
 
 .crn-fill-btn {
@@ -576,6 +590,13 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.total-credit {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  white-space: nowrap;
 }
 
   #calendar {

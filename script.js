@@ -4,6 +4,7 @@ let filteredCourses = [];
 let departmentFilters = [];
 let selectedCourses = [];
 let courseColors = new Map();
+let courseCredits = {};
 let formCounter = 0; // Form ID sayacı
 let formToCRN = new Map(); // Her formun son eklediği CRN'i takip et
 let calendars = [];
@@ -112,6 +113,48 @@ function updateCrnScript() {
   const list = crns.map(crn => `'${crn}'`).join(',');
   const script = `${CRN_SCRIPT_PREFIX}${list}${CRN_SCRIPT_SUFFIX}`;
   crnBtn.setAttribute('href', script);
+}
+
+function getCreditForCourseCode(kod) {
+  if (!kod) return '';
+  const credit = courseCredits?.[kod];
+  if (credit === undefined || credit === null || credit === '') return '';
+  return credit;
+}
+
+function updateFormCreditDisplay(formId, crnOverride = null) {
+  const creditEl = document.getElementById(`credit-${formId}`);
+  if (!creditEl) return;
+  const crnSelect = document.getElementById(`crn-${formId}`);
+  const crn = crnOverride !== null ? crnOverride : crnSelect?.value;
+  if (!crn) {
+    creditEl.textContent = 'Kredi: -';
+    creditEl.classList.add('empty');
+    return;
+  }
+  const course = allCourses.find(c => c.CRN === crn) || filteredCourses.find(c => c.CRN === crn);
+  const credit = course ? getCreditForCourseCode(course.Kod) : '';
+  if (credit !== '') {
+    creditEl.textContent = `Kredi: ${credit}`;
+    creditEl.classList.remove('empty');
+  } else {
+    creditEl.textContent = 'Kredi: -';
+    creditEl.classList.add('empty');
+  }
+}
+
+function updateTotalCredit() {
+  const totalEl = document.getElementById('total-credit');
+  if (!totalEl) return;
+  let total = 0;
+  selectedCourses.forEach(course => {
+    const credit = parseFloat(getCreditForCourseCode(course.Kod));
+    if (!Number.isNaN(credit)) {
+      total += credit;
+    }
+  });
+  const display = Number.isInteger(total) ? total.toString() : total.toFixed(1);
+  totalEl.textContent = `Toplam Kredi: ${display}`;
 }
 
 function getCoursesForRender() {
@@ -479,6 +522,12 @@ function rebuildFormsFromState() {
     const crnSelect = el('select', { id: `crn-${formId}` });
     crnSelect.appendChild(el('option', { value: '', textContent: 'Seçiniz' }));
     crnGroup.appendChild(crnSelect);
+
+    const creditDisplay = el('div', {
+      className: 'credit-display empty',
+      id: `credit-${formId}`,
+      textContent: 'Kredi: -'
+    });
     
     // Silme butonu
     const removeBtn = el('button', {
@@ -503,6 +552,7 @@ function rebuildFormsFromState() {
     form.appendChild(kodGroup);
     form.appendChild(dersGroup);
     form.appendChild(crnGroup);
+    form.appendChild(creditDisplay);
     
     wrapper.appendChild(form);
     wrapper.appendChild(removeBtn);
@@ -511,16 +561,19 @@ function rebuildFormsFromState() {
     // Event listener'ları ekle
     kodSelect.addEventListener('change', () => {
       updateCourseOptionsForForm(formId);
+      updateFormCreditDisplay(formId, '');
       saveNow();
     });
     dersSelect.addEventListener('change', () => {
       updateCRNOptionsForForm(formId);
+      updateFormCreditDisplay(formId, '');
       saveNow();
     });
     crnSelect.addEventListener('change', () => {
       if (crnSelect.value) {
         addCourseFromForm(formId);
       }
+      updateFormCreditDisplay(formId);
       saveNow();
     });
     
@@ -541,6 +594,7 @@ function rebuildFormsFromState() {
                   requestAnimationFrame(() => {
                     if (crnSelect.querySelector(`option[value="${crn}"]`)) {
                       crnSelect.value = crn;
+                      updateFormCreditDisplay(formId, crn);
                     }
                   });
                 });
@@ -759,9 +813,17 @@ Promise.all([
   fetch('data/department_filters.json').then(r => {
     if (!r.ok) throw new Error(`JSON yüklenemedi: ${r.status}`);
     return r.json();
+  }),
+  fetch('data/course_credits.json').then(r => {
+    if (!r.ok) {
+      console.warn(`course_credits.json yüklenemedi: ${r.status}`);
+      return {};
+    }
+    return r.json();
   })
-]).then(([csvText, depts]) => {
+]).then(([csvText, depts, credits]) => {
   departmentFilters = depts;
+  courseCredits = credits || {};
   
   // CSV'yi parse et
   Papa.parse(csvText, {
@@ -902,7 +964,7 @@ function applyFilters(options = {}) {
             crnSelect.value = '';
           }
         });
-        return;
+    return;
       }
     }
     
@@ -1078,6 +1140,12 @@ function addCourseForm() {
   const crnSelect = el('select', { id: `crn-${formId}` });
   crnSelect.appendChild(el('option', { value: '', textContent: 'Seçiniz' }));
   crnGroup.appendChild(crnSelect);
+
+  const creditDisplay = el('div', {
+    className: 'credit-display empty',
+    id: `credit-${formId}`,
+    textContent: 'Kredi: -'
+  });
   
   // Silme butonu
   const removeBtn = el('button', {
@@ -1104,6 +1172,7 @@ function addCourseForm() {
   form.appendChild(kodGroup);
   form.appendChild(dersGroup);
   form.appendChild(crnGroup);
+  form.appendChild(creditDisplay);
   
   formWrapper.appendChild(form);
   formWrapper.appendChild(removeBtn); // X butonunu formWrapper içine ekle (absolute positioning için)
@@ -1113,10 +1182,12 @@ function addCourseForm() {
   updateCourseCodeOptionsForForm(formId);
   kodSelect.addEventListener('change', () => {
     updateCourseOptionsForForm(formId);
+    updateFormCreditDisplay(formId, '');
     saveNow();
   });
   dersSelect.addEventListener('change', () => {
     updateCRNOptionsForForm(formId);
+    updateFormCreditDisplay(formId, '');
     saveNow();
   });
   // CRN değiştiğinde otomatik olarak ders ekle
@@ -1124,6 +1195,7 @@ function addCourseForm() {
     if (crnSelect.value) {
       addCourseFromForm(formId);
     }
+    updateFormCreditDisplay(formId);
     saveNow();
   });
 }
@@ -1152,6 +1224,7 @@ function updateCourseCodeOptionsForForm(formId, useAllCourses = false) {
   const crnSelect = document.getElementById(`crn-${formId}`);
   if (dersSelect) dersSelect.innerHTML = '<option value="">Seçiniz</option>';
   if (crnSelect) crnSelect.innerHTML = '<option value="">Seçiniz</option>';
+  updateFormCreditDisplay(formId, '');
 }
 
 // Tüm formlar için ders kodlarını güncelle
@@ -1175,6 +1248,7 @@ function updateCourseOptionsForForm(formId, useAllCourses = false) {
   
   courseSelect.innerHTML = '<option value="">Seçiniz</option>';
   if (crnSelect) crnSelect.innerHTML = '<option value="">Seçiniz</option>';
+  updateFormCreditDisplay(formId, '');
   
   if (!code) return;
 
@@ -1187,6 +1261,7 @@ function updateCourseOptionsForForm(formId, useAllCourses = false) {
     const option = el('option', { value: kod, textContent: `${kod} - ${ders}` });
     courseSelect.appendChild(option);
   });
+  updateFormCreditDisplay(formId, '');
 }
 
 // CRN seçeneklerini güncelle (belirli form için)
@@ -1216,6 +1291,7 @@ function updateCRNOptionsForForm(formId, useAllCourses = false) {
     const option = el('option', { value: crn, textContent: info });
     crnSelect.appendChild(option);
   });
+  updateFormCreditDisplay(formId);
 }
 
 // Ders ekle
@@ -1630,4 +1706,5 @@ function renderCalendar() {
       });
     });
   });
+  updateTotalCredit();
 }
