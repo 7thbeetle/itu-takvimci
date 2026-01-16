@@ -1468,11 +1468,17 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderCalendar() {
   const calendar = document.getElementById('calendar');
   calendar.innerHTML = '';
+
+  // Calendar genişliği: responsive ölç
+  const calendarWidth = calendar.getBoundingClientRect().width || 1600;
+  const dayLabels = calendarWidth < 700
+    ? ['Pzt', 'Sal', 'Çar', 'Per', 'Cum']
+    : ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma'];
   
   // Header
   const header = el('div', { className: 'calendar-header' });
   header.appendChild(el('div', { className: 'calendar-time-header', textContent: '' }));
-  ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma'].forEach(day => {
+  dayLabels.forEach(day => {
     header.appendChild(el('div', { className: 'calendar-day-header', textContent: day }));
   });
   calendar.appendChild(header);
@@ -1519,8 +1525,6 @@ function renderCalendar() {
   calendar.appendChild(body);
   
   // Ders bloklarını çiz
-  // Calendar genişliği: 1600px (sabit değer - CSS ile aynı olmalı)
-  const calendarWidth = 1600;
   const timeColumnWidth = 60; // Zaman sütunu genişliği
   const dayWidth = (calendarWidth - timeColumnWidth) / 5; // 308px per day
   

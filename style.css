@@ -620,6 +620,7 @@ h2 {
   height: 45px;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .calendar-time-header {
@@ -629,6 +630,10 @@ h2 {
   border-right: 1px solid rgba(255,255,255,0.2);
   color: white;
   font-size: 13px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .calendar-day-header {
@@ -640,6 +645,10 @@ h2 {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .calendar-day-header:last-child {
@@ -652,6 +661,7 @@ h2 {
     grid-template-columns: repeat(5, 1fr);
   height: 515px;
   margin-left: 60px;
+  width: calc(100% - 60px);
 }
 
 .calendar-time-label {
@@ -838,5 +848,32 @@ h2 {
   .info-section {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 12px;
+    overflow-x: hidden;
+  }
+
+  #calendar {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .calendar-container {
+    padding: 10px 0;
+  }
+
+  .calendar-day-header {
+    font-size: 12px;
+    letter-spacing: 0.2px;
+  }
+
+  .calendar-time-label {
+    font-size: 10px;
+    padding-right: 6px;
   }
 }
