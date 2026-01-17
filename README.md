@@ -1,3 +1,6 @@
+# YENİ SİTEYE TAŞINDI
+[Bu Linkten](itutakvimci.com) yeni itutakvimci sitesine erişebilirsiniz.
+
 # İTÜ Takvimci
 
 İTÜ OBS verileriyle ders programı oluşturmaya yardımcı olan basit bir web aracı.

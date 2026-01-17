@@ -1462,6 +1462,39 @@ document.addEventListener('DOMContentLoaded', () => {
   if (downloadBtn) {
     downloadBtn.addEventListener('click', downloadCalendarAsImage);
   }
+
+  const popupOverlay = document.getElementById('popup-overlay');
+  const popupClose = document.getElementById('popup-close');
+
+  if (popupOverlay) {
+    const closePopup = () => {
+      popupOverlay.classList.add('hidden');
+      document.body.classList.remove('popup-open');
+    };
+
+    const openPopup = () => {
+      popupOverlay.classList.remove('hidden');
+      document.body.classList.add('popup-open');
+    };
+
+    openPopup();
+
+    if (popupClose) {
+      popupClose.addEventListener('click', closePopup);
+    }
+
+    popupOverlay.addEventListener('click', (event) => {
+      if (event.target === popupOverlay) {
+        closePopup();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !popupOverlay.classList.contains('hidden')) {
+        closePopup();
+      }
+    });
+  }
 });
 
 // Takvim çiz
